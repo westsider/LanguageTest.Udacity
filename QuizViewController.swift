@@ -1,6 +1,6 @@
 //
 //  QuizViewController.swift
-//  ProjectZero
+//  ProjectZero completed by Warren Hansen
 //  Copyright © 2016 Udacity. All rights reserved.
 //
 
@@ -8,12 +8,12 @@ import UIKit
 import AVFoundation
 
 class QuizViewController: UIViewController, AVSpeechSynthesizerDelegate {
-  
-  @IBOutlet weak var flagButton1: UIButton!
-  @IBOutlet weak var flagButton2: UIButton!
-  @IBOutlet weak var flagButton3: UIButton!
-  @IBOutlet weak var repeatPhraseButton: UIButton!
-  
+    
+    @IBOutlet weak var flagButton1: UIButton!
+    @IBOutlet weak var flagButton2: UIButton!
+    @IBOutlet weak var flagButton3: UIButton!
+    @IBOutlet weak var repeatPhraseButton: UIButton!
+    
     var languageChoices = [Country]()
     var lastRandomLanguageID = -1
     var selectedRow = -1
@@ -23,25 +23,16 @@ class QuizViewController: UIViewController, AVSpeechSynthesizerDelegate {
     var bcpCode = ""
     let speechSynth = AVSpeechSynthesizer()
     
-  
-  
-  
-  
-
-  
-  
-  
-  
-  @IBAction func flagButtonPressed(sender: UIButton) {
-    
-    if sender.tag == correctButtonTag{
-        displayAlert("Correct",  messageText: "Good choice!")
-    }else{
-        displayAlert("Incorrect", messageText: "Nope. Try again!")
+    @IBAction func flagButtonPressed(sender: UIButton) {
+        
+        if sender.tag == correctButtonTag{
+            displayAlert("Correct",  messageText: "Good choice!")
+        }else{
+            displayAlert("Incorrect", messageText: "Nope. Try again!")
+        }
+        
     }
     
-  }
-  
   
     
     
